@@ -13,6 +13,6 @@ pipelines:
           - git remote -v
           - git checkout master
           - npm run build
-          - git add ./dist
+          - git add ./appdist
           - git commit -m "add build files"
           - git push github master
