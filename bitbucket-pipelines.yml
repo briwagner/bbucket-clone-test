@@ -1,0 +1,12 @@
+image: mediacurrent/mc-bb-pipelines:latest
+
+pipelines:
+  pull-requests:
+    master:
+      - step:
+          script:
+          - git branch
+          - git remote -v
+          - git remote add github git@github.com:briwagner/bbucket-pipeline-clone.git
+          - git checkout master
+          - git push github master
