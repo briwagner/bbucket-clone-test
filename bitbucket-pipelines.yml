@@ -6,7 +6,13 @@ pipelines:
       - step:
           script:
           - git branch
+          - git config user.email "briwagner@outlook.com"
+          - git config user.name "Brian Wagner"
           - git remote -v
           - git remote add github git@github.com:briwagner/bbucket-pipeline-clone.git
+          - git remote -v
           - git checkout master
+          - npm run build
+          - git add ./dist
+          - git commit -m "add build files"
           - git push github master
