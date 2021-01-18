@@ -1,0 +1,16 @@
+{
+  "name": "pipeline-test-ergo-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/brian_wagner/pipeline-test-ergo-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/brian_wagner/pipeline-test-ergo-site#readme"
+}
