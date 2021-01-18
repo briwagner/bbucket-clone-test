@@ -1,7 +1,7 @@
 image: mediacurrent/mc-bb-pipelines:latest
 
 pipelines:
-  pull-requests:
+  branches:
     master:
       - step:
           script:
