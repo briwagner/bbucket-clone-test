@@ -2,17 +2,28 @@ image: mediacurrent/mc-bb-pipelines:latest
 
 pipelines:
   pull-requests:
-    master:
+    dev:
       - step:
           script:
           - git branch
-          - git config user.email "briwagner@outlook.com"
-          - git config user.name "Brian Wagner"
-          - git remote -v
-          - git remote add github git@github.com:briwagner/bbucket-pipeline-clone.git
-          - git remote -v
-          - git checkout master
-          - npm run build
-          - git add ./appdist
-          - git commit -m "add build files"
-          - git push github master
+          - npm install
+          - npm run test
+  branches:
+      dev:
+        - step:
+            script:
+            - npm install
+            - npm run build
+            - git add ./appdist
+            - git commit -m "add build files"
+      master:
+        - step:
+            script:
+              - git branch
+              - git config user.email "briwagner@outlook.com"
+              - git config user.name "Brian Wagner"
+              - git remote -v
+              - git remote add github git@github.com:briwagner/bbucket-clone-test.git
+              - git remote -v
+              - git checkout master
+              - git push github master

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node index.js"
+    "build": "node index.js",
+    "test": "npx mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -12,5 +13,9 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/brian_wagner/pipeline-test-ergo-site#readme"
+  "homepage": "https://bitbucket.org/brian_wagner/pipeline-test-ergo-site#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
 }
