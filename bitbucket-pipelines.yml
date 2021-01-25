@@ -4,6 +4,8 @@ pipelines:
   pull-requests:
     dev:
       - step:
+          caches:
+            - node
           script:
           - git branch
           - npm install
@@ -11,14 +13,18 @@ pipelines:
   branches:
       dev:
         - step:
+            caches:
+              - node
             script:
             - npm install
             - npm run build
             - git add ./appdist
-            - git commit -m "add build files"
+            - git commit -m "add build files [skip ci]"
             - git push origin dev
       master:
         - step:
+            caches:
+              - node
             script:
               - git branch
               - git config user.email "briwagner@outlook.com"
