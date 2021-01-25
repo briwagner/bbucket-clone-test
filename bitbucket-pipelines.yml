@@ -16,6 +16,7 @@ pipelines:
             - npm run build
             - git add ./appdist
             - git commit -m "add build files"
+            - git push origin dev
       master:
         - step:
             script:
