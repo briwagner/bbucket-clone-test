@@ -12,7 +12,7 @@ function timestampMessage(t) {
   return t + " " + Date.now();
 }
 
-let appText = timestampMessage("Test content");
+let appText = timestampMessage("Test content with time:");
 let filename = "./appdist/build.txt";
 
 generateFile(filename, appText);
